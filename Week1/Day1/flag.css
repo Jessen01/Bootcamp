@@ -1,12 +1,23 @@
-.part{ background-color: green;
-       height:50px;
-       width: px;
-       margin: ;
-       border: ;
-
-
+#blue{
+       height: 150x;
+       width: 100;
+       background-color: blue;
+       
 }
 
 #white{
+       height: 150px;
+       width: 100;
+       background-color: white;
+}
 
+#red{
+       height: 150px;
+       width: 100;
+       background-color: red;
+
+}
+
+div{
+       display: inline-block;
 }
