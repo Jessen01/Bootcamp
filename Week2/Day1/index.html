@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-dth, initial-scale=1.0"> <title>javascript</title>
+    <script src=""></script>
+    <script>
+       let addressNumber = "vatel";
+       let addressStreet ="pierrefond";
+       let country = "Mauritius";
+
+       let globalAddress = ("I study at" +" "+ addressNumber +" "+ addressStreet +" "+country);
+       console.log(globalAddress);
+
+                /////
+
+       let birthyear = 1999;
+       let futureyear = 2030;
+       let futureage = futureyear - birthyear;
+    //    console.log(futureage);
+       console.log("I will be " + futureage + " in " +futureyear);
+
+
+       let pet = ['cat','dog','fish','rabbit','cow'];
+       console.log(pet[1]);
+       pet.push('horse');
+       console.log(pet);
+       pet.splice(3,1);
+       console.log(pet);
+       console.log(pet.length);
+
+       //////////
+        let food = "briyani"
+        let meal ="roti"
+        console.log("If your favorite food is " + food + " and your favorite meal of the day is "+ meal + " I eat " + food +" at every dinner ")
+
+        let myWatchedSeries = ["black mirror", "money heist", "the big bang theory"];
+        let myWatchedSeriesLength =["attack on titan", "bleach","naruto"];
+        let myWatchedSeriesSentence =["anime1","anime2","anime3"];
+        console.log("I watch 3 anime which is "+ myWatchedSeriesLength);
+
+        let bbt_pos = myWatchedSeries.indexOf("the big bang theory")
+        myWatchedSeries[bbt_pos] = "friends";
+        myWatchedSeries.push("naruto");
+        myWatchedSeries.unshift("attack on titan");
+        console.log(myWatchedSeries)
+        let bbt = myWatchedSeries.indexOf("black mirror")
+        myWatchedSeries.splice(bbt,1);
+        console.log(myWatchedSeries);
+        let posmoney = myWatchedSeries.indexOf("money heist");
+        let str = myWatchedSeries[posmoney]
+        let str1 = str.substring(2,3);
+        console.log(str1);
+
+
+        let celsius = 40;
+        let fahrenheit = celsius / 5 * 9 + 32;
+        let newtemp = fahrenheit;
+        console.log(newtemp);
+        console.log(celsius + ' c ' + ' is '+ newtemp + ' f ')
+        /////
+
+        let c;
+    let a = 34;
+    let b = 21;
+
+    console.log(a+b) //first expression
+    // Prediction:  will add 34 to 21 which gives 55
+    // Actual: 55
+
+    a = 2;
+
+    console.log(a+b) //second expression
+    // Prediction: a got a new value of 2, it adds 2 and 21 which gives 23
+    // Actual:23
+
+  
+
+ //////Gold
+ //////Exercise 1
+    let sentence = ["my","favorite","color","is","blue"];
+    let result = sentence.join(' ');
+    console.log(result);
+
+    //Exercise 2
+     str1 = "mix";
+    let str2 = "pod";
+    let newstr1 = str1.substring(-1,);
+    let newstr2 = str2.substring(-1,);
+    console.log(newstr1,newstr2);
+
+
+    //Exercise 3
+    let num1 = prompt ('Input first number');
+    let num2 = prompt ('Input Second number');
+    let sum = +num1 + +num2;
+    alert("Result is " + sum);
+
+
+
+
+    ////Ninja
+
+    //Exercise 1
+    5 >= 1    //true
+    0 === 1   // false
+    4 <= 1     // false
+    1 != 1   // false
+    "A" > "B"  //false
+    "B" < "C"   //true
+    "a" > "A"   // true
+    "b" < "A"   // false
+    true === false  //false
+    true != true  //false
+
+
+      //Exercise 2 : Ask For Numbers
+      let input = prompt("Enter a string containing numbers separated by spaces");
+      let manynum = input.split(" ");
+
+
+    
+    
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

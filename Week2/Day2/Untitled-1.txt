@@ -1,0 +1,130 @@
+//exercise 4
+    console.log(3 + 4 + '5');
+    // the output will be 75 because it will add 3 and 4 which gives 7 but treats 5 as a string and contatenate it 
+    //output : 75
+
+    //exercise 5
+            typeof(15)
+        // Prediction: number
+        // Actual: integer
+
+        typeof(5.5)
+        // Prediction: number
+        // Actual: decimal
+
+        typeof(NaN)
+        // Prediction: not a number
+        // Actual:
+
+        typeof("hello")
+        // Prediction: words
+        // Actual: string
+        
+        typeof(true)
+        // Prediction: logical
+        // Actual: boolean
+
+        typeof(1 != 2)
+        // Prediction: condition
+        // Actual: true
+
+        "hamburger" + "s"
+        // Prediction: concatenate string
+        // Actual: hamburgers
+
+        "hamburgers" - "s"
+        // Prediction: 
+        // Actual: NaN
+
+        "1" + "3"
+        // Prediction: add two string together
+        // Actual: 13
+
+        "1" - "3"
+        // Prediction: will change both string to number
+        // Actual: -2
+
+        "johnny" + 5
+        // Prediction: contatenate one string to a number
+        // Actual:johnny5
+
+        "johnny" - 5
+        // Prediction:
+        // Actual: NaN
+
+        99 * "hello"
+        // Prediction:
+        // Actual: NaN
+
+        1 != 1
+        // Prediction:
+        // Actual: false
+
+        1 == "1"
+        // Prediction:
+        // Actual: true 
+
+        1 === "1"
+        // Prediction:
+        // Actual: false
+
+
+
+
+//Exercise 6
+    5 + "34"
+    // Prediction:
+    // Actual: 534
+
+    5 - "4"
+    // Prediction: string 4 is converted to integer
+    // Actual: 1
+
+    10 % 5
+    // Prediction:
+    // Actual: 0
+
+    5 % 10
+    // Prediction:
+    // Actual: 5
+
+    "Java" + "Script"
+    // Prediction:
+    // Actual: javascript
+
+    " " + " "
+    // Prediction: add two space together
+    // Actual:  
+
+    " " + 0
+    // Prediction: add 0 to nothing
+    // Actual: 0
+
+    true + true
+    // Prediction: true is 1
+    // Actual: 2
+
+    true + false 
+    // Prediction: 1+0 =1
+    // Actual: 1
+
+    false + true
+    // Prediction: 0+1=1
+    // Actual: 1
+
+    false - true
+    // Prediction: 0-1 =-1
+    // Actual:  -1
+
+    !true
+    // Prediction: opposite of true
+    // Actual: false
+
+    3 - 4
+    // Prediction: 
+    // Actual: -1
+
+    "Bob" - "bill"
+    // Prediction:
+    // Actual: NaN
+
