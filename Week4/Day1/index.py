@@ -53,10 +53,10 @@
 
 
 #exercise 1
-print('Hello World \n' * 5)
+# print('Hello World \n' * 5)
 
 # exercise 2
-print((99**3) * 8)
+# print((99**3) * 8)
 
 # exercise3
 # >>> 5 < 3 # false
@@ -68,8 +68,8 @@ print((99**3) * 8)
 
 #exercise4
 
-computer_brand = "acer"
-print('I have a {} laptop'.format(computer_brand))
+# computer_brand = "acer"
+# print('I have a {} laptop'.format(computer_brand))
 
 
 # exercise 5
