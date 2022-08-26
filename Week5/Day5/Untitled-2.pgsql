@@ -1,0 +1,1 @@
+SELECT * FROM film JOIN inventory on film.film_id = inventory.film_id WHERE film.film_id NOT IN (inventory.film_id)
