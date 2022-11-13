@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% block content %}   
+
+<body>
+
+<div>Hello from homepage</div>
+<div>
+    {% if user.is_authenticated %}
+    <h1>All the new films</h1>
+    {%for i in films%}
+    {{i.title }} by {{i.director.all.0}}<br>
+    {{i.release_date}}<br>
+    {{i.created_in_country}}<br>
+    {{i.available_in_countries}}
+    {%endfor%}
+    {% endif %}
+
+
+
+</div>
+</body>
+
+{% endblock %} 

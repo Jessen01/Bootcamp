@@ -48,4 +48,5 @@ CREATE TABLE customer_review(
 
 -- 5.Add 2 movie reviews. Make sure you link them to valid objects in the other tables.
     INSERT INTO customer_review(film_id,reviews)
-    VALUES('the film is good')
+    VALUES('mission impossible','the film is good')
+          ('')

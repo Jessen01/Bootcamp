@@ -1,0 +1,26 @@
+
+
+<nav style="background-color:lightblue;">
+
+<ul >
+     <li><h1>IMBI</h1></li>
+
+     <li>Home</li>
+     <li>Welcome</li>
+     <li>Profile</li>
+     <li> <a href = "/accounts/login">Log in</li></a>
+     
+     {% if user.is_authenticated %}
+     <a class="nav-item nav-link" href="{% url 'logout' %}">
+         Log out <i class="fas fa-sign-out-alt"></i>
+
+
+     {% endif %}
+
+    {% if user.is_superuser %}
+    <li><a href='/films/addDirector/'/>Add a director</a></li>
+    <li> <a href='/films/addFilm/'>Add a film</a></li>
+    <li> <a href='films/deleteDirector/'> Delete a film</a></li>
+    {% endif %}
+</ul>
+</nav>

@@ -1,0 +1,5 @@
+df = pd.read_csv('https://raw.githubusercontent.com/selva86/datasets/master/Cars93_miss.csv')
+df.rename(columns = {'Type':'Typeofcar'}, inplace = True)
+print("the remaining was successful")
+print(df.info())
+print(df.isnull().sum())

@@ -1,30 +1,58 @@
-import sqlite3
-from tabulate import tabulate
+import psycopg2
+HOSTNAME = 'localhost'
+USERNAME = 'postgres'
+PASSWORD = 'jes'
+DATABASE = 'menu'
 
-def order():
-    choice = None
-    while choice != "X":
-        print("Moti's Fruit Shake Stand with questionable hygiene")
-        inv = get_inv()
-        print(tabulate(inv, headers=['Fruit', 'Amount']))
-        choice = input("What do you want to add to your shake?")
-        update_inv(choice)
-    else:
-        print("Bye")
 
-def update_inv(choice):
-    query = f"UPDATE fruit SET quantity=quantity-1 WHERE name = '{choice}';"
-    return run_query(query)
+class MenuItem:
+    def __init__(self,name,price):
+        self.name = name
+        self.price = price
 
-def get_inv():
-    query = "SELECT name, quantity FROM fruit ORDER BY name ASC;"
-    return run_query(query)
+    def save(self):
+        connection = psycopg2.connect(host=HOSTNAME, user=USERNAME, password=PASSWORD, dbname=DATABASE )
+        cursor = connection.cursor()
 
-def run_query(query):
-    connection = sqlite3.connect("shakes.db")
-    cursor = connection.cursor()
-    cursor.execute(query)
-    connection.commit()
-    results = cursor.fetchall()
-    connection.close()
-    return results
+        query = f"INSERT INTO menuitem (name,price) VALUES ('"+str(self.name)+ "','"+str(self.price)+"');"
+
+        cursor.execute(query)
+        connection.commit()
+        cursor.close()
+        connection.close()
+
+item = MenuItem('wrap', 50)
+item.save()
+
+    # @classmethod
+    def delete(self):
+        connection = psycopg2.connect(host=HOSTNAME, user=USERNAME, password=PASSWORD, dbname=DATABASE )
+        cursor = connection.cursor()
+
+        delete_query = f'DELETE FROM menuitem WHERE item = {self.name}'
+        cursor.execute(delete_query)
+        connection.commit()
+        cursor.close()
+        connection.close()
+
+item = MenuItem('Burger')
+item.delete()
+
+    # @classmethod
+    def update (self, new_price):
+        connection = psycopg2.connect(host=HOSTNAME, user=USERNAME, password=PASSWORD, dbname=DATABASE )
+        cursor = connection.cursor()
+        self.price = new_price
+        update_query = f"UPDATE menuitem set price = {self.price} where item = {self.name}"
+
+        cursor.execute(update_query)
+        connection.commit()
+        cursor.close()
+        connection.close()
+
+    @classmethod
+    def all(cls):
+        connection = psycopg2.connect(host=HOSTNAME, user=USERNAME, password=PASSWORD, dbname=DATABASE )
+        cursor = connection.cursor()
+        all_query = "SELECT * FROM menu"
+        cursor.execute(all_query)
